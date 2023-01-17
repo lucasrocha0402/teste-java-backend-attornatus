@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "3992239d-04f1-4b93-bc2a-a5f0b5dcd800",
+		"name": "api teste de pessoa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19173198"
+	},
+	"item": [
+		{
+			"name": "endereço",
+			"item": [
+				{
+					"name": "deletando endereço por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/enderecos/endereco/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"enderecos",
+								"endereco",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos os endereços da pessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/enderecos/pessoa/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"enderecos",
+								"pessoa",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "informando o endereço principal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pessoaId\": 2,\r\n    \"enderecoId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/enderecos/principal",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"enderecos",
+								"principal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criando endereço",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pessoaId\" : 2,\r\n    \"endereco\" : \"Rua da lagosta\",\r\n    \"logadouro\" : \"Perto da praia do coquinho\",\r\n    \"cidade\" : \"Fortaleza\",\r\n    \"cep\" : 123456789,\r\n    \"numero\" : 10,\r\n    \"atual\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/enderecos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"enderecos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pessoa",
+			"item": [
+				{
+					"name": "criar o cadastro de uma pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Lucas Rocha\",\r\n    \"dataDeNascimento\": \"10/04/2004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/pessoas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar uma pessoa por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/pessoas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar uma pessoa por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Lucas Rocha Galdencio Sampaio\",\r\n    \"dataDeNascimento\": \"10/04/2004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/pessoas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"pessoas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar uma pessoa por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/pessoas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"pessoas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar lista de pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/pessoas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
